@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { ListaEstudiantes } from "./ListaEstudiantes.js";
+import { ListaEstudiantesClass } from "./ListaEstudiantesClass";
+
+const listaNombresEstudiantes = [
+  "José",
+  "Juan",
+  "Luis",
+  "Cristian",
+  "Fiorella",
+  "Yensy",
+];
+
+const listaEstudiantes = [
+  {
+    nombre: "José",
+    apellido: "Pérez",
+    edad: 20,
+  },
+  {
+    nombre: "Juan",
+    apellido: "Pérez",
+    edad: 20,
+  },
+  {
+    nombre: "Luis",
+    apellido: "Pérez",
+    edad: 20,
+  },
+  {
+    nombre: "Cristian",
+    apellido: "Pérez",
+    edad: 20,
+  },
+  {
+    nombre: "Fiorella",
+    apellido: "Pérez",
+    edad: 20,
+  },
+  {
+    nombre: "Yensy",
+    apellido: "Pérez",
+    edad: 20,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ListaEstudiantes listaEstudiantes={listaNombresEstudiantes} />
+      <ListaEstudiantesClass listaEstudiantes={listaNombresEstudiantes} />
     </div>
   );
 }
