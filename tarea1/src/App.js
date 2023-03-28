@@ -1,14 +1,6 @@
-import { ListaEstudiantes } from "./ListaEstudiantes.js";
+import { ListaEstudiantes } from "./ListaEstudiantes";
 import { ListaEstudiantesClass } from "./ListaEstudiantesClass";
 
-const listaNombresEstudiantes = [
-  "José",
-  "Juan",
-  "Luis",
-  "Cristian",
-  "Fiorella",
-  "Yensy",
-];
 
 const listaEstudiantes = [
   {
@@ -46,8 +38,15 @@ const listaEstudiantes = [
 function App() {
   return (
     <div>
-      <ListaEstudiantes listaEstudiantes={listaNombresEstudiantes} />
-      <ListaEstudiantesClass listaEstudiantes={listaNombresEstudiantes} />
+      <ul>
+    {/* <importar el clase> */}
+    <ListaEstudiantesClass listaEstudiantes={listaEstudiantes} />
+      </ul>
+
+        <ul>
+          <ListaEstudiantes listaEstudiantes={listaEstudiantes} />
+          
+        </ul>
     </div>
   );
 }

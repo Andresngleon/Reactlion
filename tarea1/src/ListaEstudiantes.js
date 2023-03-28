@@ -4,12 +4,11 @@ export const ListaEstudiantes = ({ listaEstudiantes }) => {
   return (
     <React.Fragment>
       {listaEstudiantes.map((estudiante) => (
-        <div key={estudiante}>
-          <p>{estudiante}</p>
-          <p>nombre: Nombre</p>
-          <p>apellido: Apellido</p>
-          <p>edad: 20</p>
-        </div>
+        <li key={estudiante.nombre}>
+          <h4><b>Nombre</b>: {estudiante.nombre}</h4>
+          <p><b>Apellido</b>: {estudiante.apellido} </p>
+          <p><b>Edad</b>: {estudiante.edad}</p>
+        </li>
       ))}
     </React.Fragment>
   );

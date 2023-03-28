@@ -6,7 +6,12 @@ export class ListaEstudiantesClass extends Component {
     return (
       <React.Fragment>
         {listaEstudiantes.map((estudiante) => (
-          <p>{estudiante}</p>
+          // recordatorio siempre poner key cuando se recorre un arreglo
+          <li key={estudiante.nombre}> 
+            <h4><i>Nombre</i>: {estudiante.nombre}</h4>
+            <p><i>Apellido</i>: {estudiante.apellido}</p>
+            <p><i>Edad</i>: {estudiante.edad}</p>
+          </li>
         ))}
       </React.Fragment>
     );
